@@ -6,7 +6,6 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "../src/generated/prisma"
 }
 
 datasource db {
@@ -15,7 +14,37 @@ datasource db {
 }
 
 model User {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
+  id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  clerkId            String   @unique
+  name               String
+  email              String   @unique
+  profileImage       String?
+  subscription       Boolean? @default(false)
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+  lemonSqueezyApiKey String?
+  storeId            String?
+  webhookSecret      String?
+
+  Projects          Project[] @relation("OwnedProjects")
+  PurchasedProjects Project[] @relation("PurchasedProjects")
+}
+
+model Project {
+  id           String   @id @default(cuid())
+  title        String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  slides       Json?
+  userId       String   @db.Uuid
+  outlines     String[]
+  isDeleted    Boolean  @default(false)
+  isSellable   Boolean? @default(false)
+  isSelectable Boolean? @default(false)
+  variantId    String?
+  thumbnail    String?
+  themeName    String   @default("light")
+
+  User       User   @relation("OwnedProjects", fields: [userId], references: [id])
+  Purchasers User[] @relation("PurchasedProjects")
 }
