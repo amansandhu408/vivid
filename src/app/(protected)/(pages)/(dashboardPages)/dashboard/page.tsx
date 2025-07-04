@@ -1,4 +1,4 @@
-import { getAllProjects } from "@/actions/projects";
+import { getAllProjects } from "@/actions/project";
 import NotFound from "@/components/global/not-found";
 import Projects from "@/components/global/projects";
 import React from "react";
