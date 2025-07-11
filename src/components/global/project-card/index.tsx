@@ -5,7 +5,7 @@ import { useSlideStore } from "@/store/useSlideStore";
 import { JsonValue } from "@prisma/client/runtime/library";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
-import ThumbnailPreview from "./thumbnail-peview";
+import ThumbnailPreview from "./thumbnail-preview";
 import { timeAgo } from "@/lib/utils";
 import AlertDialogBox from "../alert-dialog";
 import { useState } from "react";

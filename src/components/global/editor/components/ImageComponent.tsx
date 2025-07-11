@@ -1,4 +1,4 @@
-import UploadImage from "@/app/(protected)/presentation/[presentationId]/_components/editor/UploadImage";
+import UploadImage from "./UploadImage";
 import Image from "next/image";
 import React from "react";
 

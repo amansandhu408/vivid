@@ -12,7 +12,7 @@ import {
   TwoColumnsIcon,
   TwoColumnsWithHeadingsIcon,
   TwoImageColumnsIcon,
-} from "./iconsComponent";
+} from "./IconsComponent";
 import {
   AccentLeft,
   AccentRight,
@@ -27,7 +27,7 @@ import {
   TwoColumns,
   TwoColumnsWithHeadings,
   TwoImageColumns,
-} from "./slideLayouts";
+} from "./SlideLayouts";
 import {
   BulletListComponent,
   CalloutBoxComponent,
@@ -41,7 +41,7 @@ import {
   Table,
   Title,
   TodoListComponent,
-} from "./slideCompoennts";
+} from "./slideComponents";
 
 export const toastCustomStyles = {
   success: {
@@ -67,11 +67,6 @@ export const data = {
       title: "Home",
       url: "/dashboard",
       icon: House,
-    },
-    {
-      title: "Shared",
-      url: "/shared",
-      icon: Share2,
     },
     {
       title: "Templates",

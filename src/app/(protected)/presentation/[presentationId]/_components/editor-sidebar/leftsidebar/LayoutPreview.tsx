@@ -2,7 +2,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useSlideStore } from "@/store/useSlideStore";
 import React, { useEffect, useState } from "react";
-import DragabbleSlidePreview from "./DragabbleSlidePreview";
+import DragabbleSlidePreview from "./DraggableSlidePreview";
 
 const LayoutPreview = () => {
   const { getOrderedSlides, reorderSlides } = useSlideStore();
