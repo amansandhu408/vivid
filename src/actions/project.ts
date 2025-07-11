@@ -267,7 +267,7 @@ export const getDeletedProjects = async () => {
     });
 
     if (projects.length === 0) {
-      return { status: 400, message: "No deletedd projects found", data: [] };
+      return { status: 400, message: "No deleted projects found", data: [] };
     }
 
     return { status: 200, data: projects };
