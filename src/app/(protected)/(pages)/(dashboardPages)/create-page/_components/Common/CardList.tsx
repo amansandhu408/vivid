@@ -29,7 +29,7 @@ const CardList = ({
   onCardDoubleClick,
   setEditingCard,
   addMultipleOutlines,
-  outlines,
+  outlines, 
   addOutline,
   setSelectedCard,
 }: Props) => {
